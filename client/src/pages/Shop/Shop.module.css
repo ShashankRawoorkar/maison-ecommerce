@@ -1,0 +1,145 @@
+.shopPage {
+  animation: fadeIn 0.4s ease;
+}
+
+.shopHero {
+  padding: 60px 80px;
+  background: var(--charcoal);
+  border-bottom: 1px solid var(--border);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.breadcrumb {
+  font-size: 12px;
+  color: var(--muted);
+  letter-spacing: 0.1em;
+  margin-bottom: 12px;
+}
+.breadcrumb span {
+  color: var(--gold);
+}
+
+.shopTitle {
+  font-family: 'Cormorant Garant', serif;
+  font-size: 52px;
+  font-weight: 300;
+  color: var(--white);
+}
+
+.shopHeroRight {
+  text-align: right;
+}
+
+.productCount {
+  font-size: 13px;
+  color: var(--muted);
+}
+.productCount strong {
+  color: var(--cream);
+}
+
+.shopLayout {
+  display: grid;
+  grid-template-columns: 280px 1fr;
+  gap: 0;
+  min-height: 80vh;
+}
+
+.shopMain {
+  padding: 32px 48px;
+  background: var(--black);
+}
+
+.shopGrid {
+  display: grid;
+  gap: 20px;
+  animation: fadeIn 0.3s ease;
+}
+.grid4 {
+  grid-template-columns: repeat(4, 1fr);
+}
+.grid3 {
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.loading {
+  display: flex;
+  justify-content: center;
+  padding: 80px 0;
+}
+
+.spinner {
+  width: 36px;
+  height: 36px;
+  border: 2px solid var(--border);
+  border-top-color: var(--gold);
+  border-radius: 50%;
+  animation: spin 0.8s linear infinite;
+}
+
+.empty {
+  text-align: center;
+  padding: 80px 0;
+  color: var(--muted);
+  font-size: 14px;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (max-width: 1200px) {
+  .shopHero {
+    padding: 40px 48px;
+  }
+  .shopMain {
+    padding: 24px 32px;
+  }
+  .grid4 {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 900px) {
+  .shopLayout {
+    grid-template-columns: 1fr;
+  }
+  .grid4,
+  .grid3 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 480px) {
+  .shopHero {
+    padding: 32px 24px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+  }
+  .shopTitle {
+    font-size: 36px;
+  }
+  .shopMain {
+    padding: 20px 24px;
+  }
+  .grid4,
+  .grid3 {
+    grid-template-columns: 1fr;
+  }
+}

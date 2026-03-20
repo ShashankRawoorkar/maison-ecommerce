@@ -1,0 +1,63 @@
+.shopToolbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 32px;
+  padding-bottom: 24px;
+  border-bottom: 1px solid var(--border);
+}
+
+.resultsCount {
+  font-size: 13px;
+  color: var(--muted);
+}
+
+.resultsCount strong {
+  color: var(--cream);
+}
+
+.toolbarRight {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.sortSelect {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  color: var(--cream);
+  font-family: 'DM Sans', sans-serif;
+  font-size: 13px;
+  padding: 8px 14px;
+  outline: none;
+  cursor: pointer;
+  appearance: none;
+  padding-right: 32px;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='6'%3E%3Cpath d='M0 0l5 6 5-6z' fill='%23888'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 12px center;
+}
+
+.viewToggle {
+  display: flex;
+  gap: 4px;
+}
+
+.viewBtn {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  color: var(--mid);
+  width: 36px;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+.viewBtn.active,
+.viewBtn:hover {
+  background: var(--gold);
+  color: var(--black);
+  border-color: var(--gold);
+}

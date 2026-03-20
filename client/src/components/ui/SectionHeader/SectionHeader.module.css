@@ -1,0 +1,30 @@
+.sectionHeader {
+  margin-bottom: 56px;
+}
+
+.sectionEyebrow {
+  font-size: 10px;
+  letter-spacing: 0.35em;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: 16px;
+}
+
+.sectionTitle {
+  font-family: 'Cormorant Garant', serif;
+  font-size: clamp(32px, 4vw, 52px);
+  font-weight: 300;
+  color: var(--white);
+  line-height: 1.15;
+}
+
+.sectionTitle em {
+  font-style: italic;
+  color: var(--gold-light);
+}
+
+.sectionDivider {
+  width: 60px;
+  height: 1px;
+  background: var(--gold-dark);
+}

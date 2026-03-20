@@ -1,0 +1,130 @@
+.newsletterSection {
+  padding: 80px;
+  background: var(--deep);
+  border-top: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 80px;
+  align-items: center;
+}
+
+.newsletterLeft {
+  display: flex;
+  flex-direction: column;
+}
+
+.sectionEyebrow {
+  font-size: 10px;
+  letter-spacing: 0.35em;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: 16px;
+}
+
+.newsletterTitle {
+  font-family: 'Cormorant Garant', serif;
+  font-size: 42px;
+  font-weight: 300;
+  color: var(--white);
+  line-height: 1.2;
+  margin-bottom: 16px;
+}
+.newsletterTitle em {
+  font-style: italic;
+  color: var(--gold-light);
+}
+
+.newsletterSub {
+  color: var(--light);
+  font-size: 15px;
+  line-height: 1.7;
+}
+
+.newsletterRight {
+  display: flex;
+  flex-direction: column;
+}
+
+.newsletterForm {
+  display: flex;
+  gap: 0;
+}
+
+.newsletterInput {
+  flex: 1;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-right: none;
+  color: var(--cream);
+  font-family: 'DM Sans', sans-serif;
+  font-size: 14px;
+  padding: 16px 22px;
+  outline: none;
+  transition: border-color 0.25s;
+}
+.newsletterInput:focus {
+  border-color: var(--gold);
+}
+.newsletterInput::placeholder {
+  color: var(--muted);
+}
+
+.newsletterSubmit {
+  background: var(--gold);
+  border: 1px solid var(--gold);
+  color: var(--black);
+  font-family: 'DM Sans', sans-serif;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  padding: 16px 32px;
+  cursor: pointer;
+  transition: background 0.25s;
+  white-space: nowrap;
+}
+.newsletterSubmit:hover:not(:disabled) {
+  background: var(--gold-light);
+}
+.newsletterSubmit:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.newsletterDisclaimer {
+  font-size: 12px;
+  color: var(--muted);
+  margin-top: 14px;
+}
+
+@media (max-width: 1200px) {
+  .newsletterSection {
+    padding: 60px 48px;
+    gap: 48px;
+  }
+}
+
+@media (max-width: 768px) {
+  .newsletterSection {
+    grid-template-columns: 1fr;
+    gap: 40px;
+    padding: 60px 32px;
+  }
+}
+
+@media (max-width: 480px) {
+  .newsletterSection {
+    padding: 48px 24px;
+  }
+  .newsletterForm {
+    flex-direction: column;
+  }
+  .newsletterInput {
+    border-right: 1px solid var(--border);
+    border-bottom: none;
+  }
+  .newsletterInput:focus {
+    border-color: var(--gold);
+  }
+}

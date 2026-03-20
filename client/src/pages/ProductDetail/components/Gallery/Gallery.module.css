@@ -1,0 +1,43 @@
+.pdGallery {
+  background: var(--charcoal);
+  padding: 60px;
+  position: sticky;
+  top: 73px;
+  height: fit-content;
+}
+
+.pdMainImg {
+  width: 100%;
+  aspect-ratio: 3 / 4;
+  object-fit: cover;
+  margin-bottom: 16px;
+  border: 1px solid var(--border);
+}
+
+.pdThumbs {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+}
+
+.pdThumb {
+  aspect-ratio: 1;
+  object-fit: cover;
+  cursor: pointer;
+  border: 2px solid transparent;
+  transition: border-color 0.2s, filter 0.2s;
+  filter: brightness(0.7);
+  width: 100%;
+}
+.pdThumb.active,
+.pdThumb:hover {
+  border-color: var(--gold);
+  filter: brightness(1);
+}
+
+@media (max-width: 768px) {
+  .pdGallery {
+    padding: 32px 24px;
+    position: static;
+  }
+}

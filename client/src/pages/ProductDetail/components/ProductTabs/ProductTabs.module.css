@@ -1,0 +1,147 @@
+.productTabsSection {
+  padding: 80px;
+  background: var(--charcoal);
+  border-top: 1px solid var(--border);
+}
+
+.ptabs {
+  display: flex;
+  gap: 0;
+  border-bottom: 1px solid var(--border);
+  margin-bottom: 48px;
+}
+
+.ptab {
+  background: none;
+  border: none;
+  color: var(--muted);
+  font-family: 'DM Sans', sans-serif;
+  font-size: 12px;
+  font-weight: 500;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  padding: 16px 32px;
+  cursor: pointer;
+  transition: all 0.2s;
+  border-bottom: 2px solid transparent;
+  margin-bottom: -1px;
+}
+.ptab:hover {
+  color: var(--cream);
+}
+.ptab.active {
+  color: var(--gold);
+  border-bottom-color: var(--gold);
+}
+
+.ptabContent {
+  animation: fadeIn 0.3s ease;
+}
+.active {
+  display: block;
+}
+
+.tabDesc p {
+  color: var(--light);
+  font-size: 15px;
+  line-height: 1.9;
+  margin-bottom: 20px;
+}
+.tabDesc p:last-child {
+  margin-bottom: 0;
+}
+
+.reviewsList {
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+}
+
+.reviewItem {
+  background: var(--deep);
+  border: 1px solid var(--border);
+  padding: 28px;
+}
+
+.reviewHeader {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 12px;
+}
+
+.reviewName {
+  font-weight: 500;
+  color: var(--cream);
+}
+
+.reviewDate {
+  color: var(--muted);
+  font-size: 13px;
+}
+
+.reviewStars {
+  color: var(--gold);
+  margin-bottom: 12px;
+  font-size: 15px;
+  letter-spacing: 2px;
+}
+
+.reviewText {
+  color: var(--light);
+  font-size: 14px;
+  line-height: 1.8;
+}
+
+.specsTable {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.specsTable tr {
+  border-bottom: 1px solid var(--border);
+}
+.specsTable tr:last-child {
+  border-bottom: none;
+}
+
+.specsTable td {
+  padding: 16px 20px;
+  font-size: 14px;
+}
+.specsTable td:first-child {
+  color: var(--muted);
+  width: 200px;
+  font-size: 11px;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+}
+.specsTable td:last-child {
+  color: var(--cream);
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(6px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 1200px) {
+  .productTabsSection {
+    padding: 60px 48px;
+  }
+}
+
+@media (max-width: 768px) {
+  .productTabsSection {
+    padding: 48px 24px;
+  }
+  .ptab {
+    padding: 12px 20px;
+    font-size: 10px;
+  }
+}

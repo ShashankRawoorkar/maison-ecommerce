@@ -1,0 +1,124 @@
+.sidebar {
+  background: var(--charcoal);
+  border-right: 1px solid var(--border);
+  padding: 40px 32px;
+  position: sticky;
+  top: 73px;
+  height: fit-content;
+  min-height: calc(100vh - 73px);
+}
+
+.filterGroup {
+  margin-bottom: 36px;
+  padding-bottom: 36px;
+  border-bottom: 1px solid var(--border);
+}
+.filterGroup:last-child {
+  border-bottom: none;
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
+
+.filterTitle {
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--cream);
+  margin-bottom: 20px;
+}
+
+.filterOption {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 12px;
+  cursor: pointer;
+}
+
+.filterOption input[type='checkbox'] {
+  appearance: none;
+  width: 16px;
+  height: 16px;
+  border: 1px solid var(--border);
+  background: var(--surface);
+  cursor: pointer;
+  position: relative;
+  flex-shrink: 0;
+}
+.filterOption input[type='checkbox']:checked {
+  background: var(--gold);
+  border-color: var(--gold);
+}
+.filterOption input[type='checkbox']:checked::after {
+  content: '✓';
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--black);
+  font-size: 10px;
+  font-weight: 700;
+}
+
+.filterLabel {
+  font-size: 13px;
+  color: var(--light);
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  align-items: center;
+}
+
+.filterCount {
+  color: var(--muted);
+  font-size: 11px;
+}
+
+.ratingStars {
+  color: var(--gold);
+  letter-spacing: 1px;
+}
+
+.priceRange {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.rangeSlider {
+  width: 100%;
+  appearance: none;
+  background: var(--border);
+  height: 2px;
+  outline: none;
+  border-radius: 1px;
+  cursor: pointer;
+}
+.rangeSlider::-webkit-slider-thumb {
+  appearance: none;
+  width: 14px;
+  height: 14px;
+  background: var(--gold);
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.rangeInputs {
+  display: flex;
+  gap: 10px;
+}
+
+.rangeInput {
+  flex: 1;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  color: var(--cream);
+  padding: 8px 12px;
+  font-family: 'DM Sans', sans-serif;
+  font-size: 13px;
+  outline: none;
+  text-align: center;
+}

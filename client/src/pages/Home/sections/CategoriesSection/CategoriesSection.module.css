@@ -1,0 +1,111 @@
+.categoriesSection {
+  padding: 100px 80px;
+  background: var(--charcoal);
+}
+
+.categoriesGrid {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr;
+  grid-template-rows: 320px 240px;
+  gap: 16px;
+}
+
+.catCard {
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+  border: 1px solid var(--border);
+}
+.catCard:first-child {
+  grid-row: 1 / 3;
+}
+
+.catCard img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.6s ease;
+  filter: grayscale(30%) brightness(0.8);
+}
+.catCard:hover img {
+  transform: scale(1.06);
+  filter: grayscale(0%) brightness(0.85);
+}
+
+.catOverlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.8) 0%, transparent 60%);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 28px;
+}
+
+.catName {
+  font-family: 'Cormorant Garant', serif;
+  font-size: 26px;
+  font-weight: 400;
+  color: var(--white);
+  margin-bottom: 6px;
+}
+
+.catCount {
+  font-size: 11px;
+  letter-spacing: 0.2em;
+  color: var(--gold);
+  text-transform: uppercase;
+}
+
+.catArrow {
+  position: absolute;
+  top: 24px;
+  right: 24px;
+  width: 40px;
+  height: 40px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--white);
+  opacity: 0;
+  transform: translateY(8px);
+  transition: all 0.3s;
+}
+.catCard:hover .catArrow {
+  opacity: 1;
+  transform: translateY(0);
+  border-color: var(--gold);
+  color: var(--gold);
+}
+
+@media (max-width: 1200px) {
+  .categoriesSection {
+    padding: 80px 48px;
+  }
+}
+
+@media (max-width: 900px) {
+  .categoriesGrid {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 240px 240px 240px;
+  }
+  .catCard:first-child {
+    grid-row: auto;
+    grid-column: span 2;
+  }
+}
+
+@media (max-width: 600px) {
+  .categoriesSection {
+    padding: 60px 24px;
+  }
+  .categoriesGrid {
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(4, 200px);
+  }
+  .catCard:first-child {
+    grid-column: auto;
+  }
+}

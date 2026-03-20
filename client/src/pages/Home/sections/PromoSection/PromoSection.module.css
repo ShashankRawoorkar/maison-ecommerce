@@ -1,0 +1,94 @@
+.promoSection {
+  padding: 0 80px 100px;
+  background: var(--black);
+}
+
+.promoGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+}
+
+.promoCard {
+  position: relative;
+  min-height: 420px;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.promoCard img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  position: absolute;
+  inset: 0;
+  transition: transform 0.6s;
+  filter: brightness(0.75);
+}
+.promoCard:hover img {
+  transform: scale(1.04);
+}
+
+.promoContent {
+  position: relative;
+  z-index: 2;
+  padding: 52px 48px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+.promoTag {
+  background: var(--gold);
+  color: var(--black);
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  padding: 6px 14px;
+  width: fit-content;
+  margin-bottom: 20px;
+}
+
+.promoTitle {
+  font-family: 'Cormorant Garant', serif;
+  font-size: 40px;
+  font-weight: 300;
+  color: var(--white);
+  line-height: 1.1;
+  margin-bottom: 16px;
+}
+
+.promoSub {
+  font-size: 14px;
+  color: rgba(255, 255, 255, 0.7);
+  margin-bottom: 28px;
+}
+
+@media (max-width: 1200px) {
+  .promoSection {
+    padding: 0 48px 80px;
+  }
+}
+
+@media (max-width: 768px) {
+  .promoGrid {
+    grid-template-columns: 1fr;
+  }
+  .promoCard {
+    min-height: 320px;
+  }
+}
+
+@media (max-width: 480px) {
+  .promoSection {
+    padding: 0 24px 60px;
+  }
+  .promoContent {
+    padding: 32px 28px;
+  }
+  .promoTitle {
+    font-size: 30px;
+  }
+}
